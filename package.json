@@ -4,7 +4,10 @@
   "description": "Mock Data Server for Orlando Magic Data Analytics Dashboard",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "migrate": "knex migrate:latest",
+    "migrate:down": "knex migrate:down",
+    "migrate:rollback": "knex migrate:rollback",
+    "seed": "knex seed:run"
   },
   "author": "Nicholas Nguyen",
   "license": "ISC",
