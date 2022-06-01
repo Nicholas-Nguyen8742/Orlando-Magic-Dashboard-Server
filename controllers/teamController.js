@@ -15,7 +15,7 @@ exports.index = (_req, res) => {
 // [GET] - Retrieves every players' ppg info
 exports.ppg = (_req, res) => {
     knex('players')
-    .select('playerNumber', 'name', 'PPG')
+    .select('name', 'PPG')
     .then((data) => {
         res.status(200).json(data);
     })
