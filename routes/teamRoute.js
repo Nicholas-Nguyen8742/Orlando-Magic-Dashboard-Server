@@ -4,3 +4,6 @@ const teamController = require('../controllers/teamController');
 router
     .route('/')
     .get(teamController.index);
+
+
+module.exports = router;
