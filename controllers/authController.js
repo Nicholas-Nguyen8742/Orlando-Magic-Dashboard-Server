@@ -1,4 +1,4 @@
-const knex = require('knex')(require('../knex'));
+const knex = require('knex')(require('../knexfile'));
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const authenticate = require('../middleware/authenticate');
