@@ -7,10 +7,4 @@ const playersData = require('./seeds_data/playersData');
  exports.seed = function (knex) {
     return knex("players").del() 
       .then(() => knex("players").insert(playersData))
-      .then(() => {
-        return knex('users');
-      })
-      .then(() => {
-        return knex('users');
-      });
 };

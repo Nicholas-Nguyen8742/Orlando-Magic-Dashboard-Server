@@ -7,7 +7,7 @@ exports.up = function(knex) {
     .createTable('players', (table) => {
         table.increments('playerNumber').primary();
         table.string('name').notNullable();
-        table.string('image').notNullable().defaultTo('Store Manager');
+        table.string('image').notNullable();
         table.string('position').notNullable();
         table.integer('age').notNullable();
         table.decimal('GP').notNullable();
@@ -20,7 +20,7 @@ exports.up = function(knex) {
         table.decimal('2PA').notNullable();
         table.decimal('2P').notNullable();
         table.decimal('3PA').notNullable();
-        table.decimal('3P%').notNullable();
+        table.decimal('3P').notNullable();
         table.decimal('eFG').notNullable();
         table.decimal('TS').notNullable();
         table.decimal('PPG').notNullable();
@@ -49,5 +49,7 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-    return knex.schema.dropTable('players');
+    return knex.schema
+        .dropTableIfExists('users')
+        .dropTableIfExists('players');
 };
