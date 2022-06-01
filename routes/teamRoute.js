@@ -9,4 +9,8 @@ router
     .route('/PPG')
     .get(teamController.ppg);
 
+router 
+    .route('/RPG-APG')
+    .get(teamController.rpgApg)
+
 module.exports = router;
