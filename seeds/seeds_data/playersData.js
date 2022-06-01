@@ -405,7 +405,7 @@ module.exports = [
   },
   {
     "playerNumber": 34,
-    "name": "Wendell Carter Jr.",
+    "name": "Wendell Carter",
     "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628976.png?imwidth=1040&imheight=760",
     "position": "C-F",
     "age": 23,
