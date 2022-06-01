@@ -11,6 +11,7 @@ app.use(express.json());
 
 // Routes
 app.use('/auth', authRoute);
+app.user('/team', teamRoute);
 
 // Port Listener
 app.listen(PORT, () => {
