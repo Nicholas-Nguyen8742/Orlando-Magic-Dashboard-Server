@@ -10,3 +10,14 @@ exports.index = (_req, res) => {
     })
     .catch((err) => res.status(400).send(`Error retrieving team data ${err}`));
 };
+
+/* [ROUTE] - '/team/ppg' */
+// [GET] - Retrieves every players' ppg info
+exports.ppg = (_req, res) => {
+    knex('players')
+    .select('playerNumber', 'name', 'PPG')
+    .then((data) => {
+        res.status(200).json(data);
+    })
+    .catch((err) => res.status(400).send(`Error retrieving PPG data for the team: ${err}`));
+};

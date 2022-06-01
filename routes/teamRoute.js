@@ -5,5 +5,8 @@ router
     .route('/')
     .get(teamController.index);
 
+router 
+    .route('/PPG')
+    .get(teamController.ppg);
 
 module.exports = router;
