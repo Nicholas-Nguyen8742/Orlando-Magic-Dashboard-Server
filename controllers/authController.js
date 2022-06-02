@@ -7,9 +7,9 @@ const authenticate = require('../middleware/authenticate');
 // [ROUTE] - "/auth/register"
 // [POST] - Creates new user through registration
 exports.register = (req, res) => {
-    const { firstName, lastName, email, position, password } = req.body;
+    const { name, email, position, password } = req.body;
 
-    if (!firstName || !lastName || !email || !position || !password) {
+    if (!name || !email || !position || !password) {
         return res.status(400).send("Please enter the required fields.");
     }
 
@@ -17,8 +17,7 @@ exports.register = (req, res) => {
 
     const user = {
         position: position,
-        firstName: firstName, 
-        lastName: lastName, 
+        name: name, 
         email: email, 
         password: hashedPassword
     };
